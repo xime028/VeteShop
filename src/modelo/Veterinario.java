@@ -24,6 +24,11 @@ public class Veterinario {
 		this.listaHospitalizados = listaHospitalizados;
 		this.citasAsignadas = citasAsignadas;
 	}
+	
+	
+	public Veterinario(){
+		
+	}
 
 
 

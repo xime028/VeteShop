@@ -2,10 +2,12 @@ package modelo;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 public class Agenda {
 
-	private Date fecha;
+	private String codigo;
+	private LocalDate fecha;
 	private Time hora;
 	private Veterinario veterinario;
 
@@ -16,7 +18,7 @@ public class Agenda {
 
 	}
 
-	public Agenda(Date fecha, Time hora, Veterinario veterinario) {
+	public Agenda(String codigo, LocalDate fecha, Time hora, Veterinario veterinario) {
 		super();
 		this.fecha = fecha;
 		this.hora = hora;
@@ -26,10 +28,19 @@ public class Agenda {
 
 
 
-	public Date getFecha() {
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public LocalDate getFecha() {
 		return fecha;
 	}
-	public void setFecha(Date fecha) {
+	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
 	public Time getHora() {

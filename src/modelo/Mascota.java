@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Mascota {
 
@@ -20,7 +21,29 @@ public class Mascota {
 		this.citas = citas;
 		this.enfermo = enfermo;
 	}
-
+	
+	
+	
+	
+	//###############################################################################################################################
+	//##################################################### Metodos de Cita #####################################################
+			
+			
+			/*
+			public Cita crearCita(Agenda agenda, Mascota mascota, Cliente cliente){
+				
+				Cita cita = null;
+				cita = 
+			}
+			
+			
+			
+			public Cita obtenerCita(String codigo){
+				
+				Cita citaEncontrada = null;
+				Iterator<Cita> iterador = getLi
+			}
+			*/
 
 
 	public String getNombre() {

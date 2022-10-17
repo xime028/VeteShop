@@ -2,14 +2,15 @@ package modelo;
 
 public class Cita {
 
-	Agenda agenda;
-	Mascota mascota;
-	Cliente cliente;
+	private String codigo;
+	private Agenda agenda;
+	private Mascota mascota;
+	private Cliente cliente;
 
 
 
-	public Cita(Agenda agenda, Mascota mascota, Cliente cliente) {
-		super();
+	public Cita(String codigo, Agenda agenda, Mascota mascota, Cliente cliente) {
+		this.codigo = codigo;
 		this.agenda = agenda;
 		this.mascota = mascota;
 		this.cliente = cliente;
@@ -50,6 +51,21 @@ public class Cita {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+
+
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+
+
 
 
 

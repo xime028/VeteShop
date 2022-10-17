@@ -18,6 +18,11 @@ public class Hospitalizacion {
 	}
 
 
+	public Hospitalizacion(){
+
+	}
+
+
 
 	public Mascota getMascota() {
 		return mascota;

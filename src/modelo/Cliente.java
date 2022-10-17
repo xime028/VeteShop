@@ -28,6 +28,10 @@ public class Cliente {
 	}
 
 
+	public Cliente(){
+
+	}
+
 
 	public String getNombre() {
 		return nombre;

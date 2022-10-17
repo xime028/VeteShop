@@ -1,11 +1,18 @@
 package modelo;
 
+import java.sql.Date;
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import exepciones.HospitalizacionException;
-import exepciones.ProductoException;
-import exepciones.ServicioException;
+import Exception.AgendaException;
+import Exception.BuzonException;
+import Exception.ClienteException;
+import Exception.HospitalizacionException;
+import Exception.ProductoException;
+import Exception.ServicioException;
+import Exception.VeterinarioException;
 
 public class Veterinaria {
 
@@ -203,6 +210,8 @@ public class Veterinaria {
 
 			}
 
+			return hospitalizacion;
+
 		}
 
 		/**
@@ -383,4 +392,251 @@ public class Veterinaria {
 		}
 
 
+
+
+		//###############################################################################################################################
+		//##################################################### Metodos de Veterinario #####################################################
+
+
+
+		public Veterinario crearVeterinario(String nombre, String cedula, String correo, String password) throws VeterinarioException{
+
+			Veterinario veterinario = null;
+			Veterinario veterinarioExistente = obtenerVeterinario(cedula);
+
+			if(veterinarioExistente != null){
+				throw new VeterinarioException("El veterinario con esta cedula: "+ cedula + "ya existe ");
+			}
+			else{
+				veterinario = new Veterinario();
+				veterinario.setCedula(cedula);
+				veterinario.setNombre(nombre);
+				veterinario.setCorreo(correo);
+				veterinario.setPassword(password);
+
+				getListaVeterinarios().add(veterinario);
+			}
+			return veterinario;
+		}
+
+
+		public Veterinario obtenerVeterinario(String cedula){
+
+			Veterinario veterinarioEncontrado = null;
+			Iterator<Veterinario>iterador = getListaVeterinarios().iterator();
+
+			while(iterador.hasNext()){
+				Veterinario veterinario = iterador.next();
+				if(veterinario.getCedula().equalsIgnoreCase(cedula)){
+					veterinarioEncontrado = veterinario;
+					break;
+				}
+			}
+			return veterinarioEncontrado;
+		}
+
+
+
+		public boolean eliminarVeterinario(String cedula) throws VeterinarioException{
+
+			boolean VeteEliminado = false;
+			Veterinario veterinario = obtenerVeterinario(cedula);
+
+			if(veterinario != null){
+				getListaVeterinarios().remove(veterinario);
+				VeteEliminado = true;
+			}
+			else{
+				throw new VeterinarioException("El veterinario con la cedula: "+ cedula + "no existe");
+			}
+
+			return VeteEliminado;
+		}
+
+
+
+
+
+
+		//###############################################################################################################################
+		//##################################################### Metodos de Cliente #####################################################
+
+
+
+		public Cliente crearCliente(String nombre, String cedula, String correo, String password) throws ClienteException{
+
+			Cliente cliente = null;
+			Cliente clienteExistente = obtenerCliente(cedula);
+
+			if(clienteExistente != null){
+				throw new ClienteException("El cliente con la cedula: "+ cedula +"ya existe" );
+			}
+			else{
+				cliente = new Cliente ();
+				cliente.setCedula(cedula);
+				cliente.setNombre(nombre);
+				cliente.setCorreo(correo);
+				cliente.setPassword(password);
+
+				getListaClientes().add(cliente);
+
+			}
+			return cliente;
+		}
+
+
+
+		public Cliente obtenerCliente(String cedula){
+
+			Cliente clienteEncontrado = null;
+			Iterator<Cliente >iterador = getListaClientes().iterator();
+
+			while(iterador.hasNext()){
+				Cliente cliente = iterador.next();
+				if(cliente.getCedula().equalsIgnoreCase(cedula)){
+					clienteEncontrado = cliente;
+					break;
+				}
+			}
+			return clienteEncontrado;
+		}
+
+
+
+		public boolean eliminarCliente(String cedula) throws ClienteException{
+
+			boolean clienteEliminado = false;
+			Cliente cliente = obtenerCliente(cedula);
+
+			if(cliente != null){
+				getListaClientes().remove(cliente);
+				clienteEliminado = true;
+			}
+			else{
+				throw new ClienteException("El cliente con cedula: " + cedula + "no existe");
+			}
+			return clienteEliminado;
+		}
+
+
+
+
+		//###############################################################################################################################
+	    //##################################################### Metodos de Buzon #####################################################
+
+
+
+		public BuzonPQRS crearBuzon(String codigo, String descripcion, String asunto, Date fecha) throws BuzonException{
+
+			BuzonPQRS buzon = null;
+			BuzonPQRS buzonExistente = obtenerBuzon(codigo);
+
+			if(buzonExistente != null){
+				throw new BuzonException("El buzon PQRS con el codigo: " + codigo + "ya existe");
+			}
+			else{
+				buzon = new BuzonPQRS();
+				buzon.setCodigo(codigo);
+				buzon.setAsunto(asunto);
+				buzon.setDescripcion(descripcion);
+				buzon.setFecha(LocalDate.now());
+
+				getBuzones().add(buzon);
+			}
+			return buzon;
+		}
+
+
+
+		public BuzonPQRS obtenerBuzon(String codigo){
+
+			BuzonPQRS buzonEncontrado = null;
+			Iterator<BuzonPQRS> iterador = getBuzones().iterator();
+
+			while(iterador.hasNext()){
+				BuzonPQRS buzon = iterador.next();
+				if(buzon.getCodigo().equalsIgnoreCase(codigo)){
+					buzonEncontrado = buzon;
+					break;
+				}
+			}
+			return buzonEncontrado;
+		}
+
+
+
+		public boolean eliminarBuzon(String codigo) throws BuzonException{
+
+			boolean buzonEliminado = false;
+			BuzonPQRS buzon = obtenerBuzon(codigo);
+
+			if(buzon != null){
+				getBuzones().remove(buzon);
+				buzonEliminado = true;
+			}
+			else{
+				throw new BuzonException("El buzon con el codigo: " + codigo + "no existe");
+			}
+			return buzonEliminado;
+		}
+
+
+
+		//###############################################################################################################################
+		//##################################################### Metodos de Veterinario #####################################################
+
+
+
+		public Agenda crearAgenda(String codigo, LocalDate fecha, Time hora, Veterinario veterinario) throws AgendaException{
+
+			Agenda agenda = null;
+			Agenda agendaExistente = obtenerAgenda(codigo);
+
+			if(agendaExistente != null){
+				throw new AgendaException("La agenda con el codigo: " + codigo + "ya existe");
+			}
+			else {
+				agenda = new Agenda();
+				agenda.setCodigo(codigo);
+				agenda.setFecha(LocalDate.now());
+				agenda.setHora(hora);
+				agenda.setVeterinario(veterinario);
+
+				getListaAgendas().add(agenda);
+			}
+			return agenda;
+		}
+
+
+		public Agenda obtenerAgenda (String codigo){
+
+			Agenda agendaEncontrada = null;
+			Iterator<Agenda>iterador = getListaAgendas().iterator();
+
+			while(iterador.hasNext()){
+				Agenda agenda = iterador.next();
+				if(agenda.getCodigo().equalsIgnoreCase(codigo)){
+					agendaEncontrada = agenda;
+					break;
+				}
+			}
+			return agendaEncontrada;
+		}
+
+
+
+		public boolean eliminarAgenda(String codigo) throws AgendaException{
+
+			boolean agendaEliminada = false;
+			Agenda agenda = obtenerAgenda(codigo);
+
+			if(agenda != null){
+				getListaAgendas().remove(agenda);
+				agendaEliminada = true;
+			}
+			else{
+				throw new AgendaException("La agenda con codigo: " + codigo + "no existe");
+			}
+			return agendaEliminada;
+		}
 }

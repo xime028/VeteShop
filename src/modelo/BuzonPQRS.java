@@ -1,17 +1,18 @@
 package modelo;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class BuzonPQRS {
 
-	private int codigo;
+	private String codigo;
 	private String descripcion;
 	private String asunto;
-	private Date fecha;
+	private LocalDate fecha;
 
 
 
-	public BuzonPQRS(int codigo, String descripcion, String asunto, Date fecha) {
+	public BuzonPQRS(String codigo, String descripcion, String asunto, LocalDate fecha) {
 		super();
 		this.codigo = codigo;
 		this.descripcion = descripcion;
@@ -20,14 +21,18 @@ public class BuzonPQRS {
 	}
 
 
+	public BuzonPQRS(){
 
-	public int getCodigo() {
+	}
+
+
+	public String getCodigo() {
 		return codigo;
 	}
 
 
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 
@@ -57,13 +62,13 @@ public class BuzonPQRS {
 
 
 
-	public Date getFecha() {
+	public LocalDate getFecha() {
 		return fecha;
 	}
 
 
 
-	public void setFecha(Date fecha) {
+	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
 
