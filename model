@@ -1,0 +1,85 @@
+//	ObservableList<Contacto> listaContactosData = FXCollections.observableArrayList();
+//
+//	@FXML
+//	private ResourceBundle resource;
+//
+//	@FXML
+//	private URL location;
+//
+//	@FXML
+//    private TableColumn<Contacto, String> numeroCelular;
+//
+//    @FXML
+//    private TextField correoTxt;
+//
+//    @FXML
+//    private TableColumn<Contacto, String> nombreTabla;
+//
+//    @FXML
+//    private TableColumn<Contacto, String> correoTabla;
+//
+//    @FXML
+//    private TableView<Contacto> contactoTable;
+//
+//    @FXML
+//    private TextField nombreTxt;
+//
+//    @FXML
+//    private TextField nombreBuscarTxt;
+//
+//    @FXML
+//    private TextField numeroTxt;
+//
+//    @FXML
+//    private Button crearBtn;
+//
+//    @FXML
+//    private Button eliminarBtn;
+//
+//    @FXML
+//    private Button buscarBtn;
+//    @FXML
+//    void buscarBtn(ActionEvent event){
+//    	buscar();
+//    }
+//    @FXML
+//    void eliminarBtn(ActionEvent event){
+//    	eliminar();
+//    }
+//    @FXML
+//    void crearBtn(ActionEvent event){
+//    	crear();
+//    }
+//    @FXML
+//    void initialize() throws UnknownHostException, IOException {
+//    	this.nombreTabla.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+//    	this.numeroCelular.setCellValueFactory(new PropertyValueFactory<>("numero telefonico"));
+//    	this.correoTabla.setCellValueFactory(new PropertyValueFactory<>("correo"));;
+//    }
+//    public void setAplicacion(Aplicacion aplicacion) {
+//		this.aplicacion = aplicacion;
+//
+//		contactoTable.getItems().clear();
+//		contactoTable.setItems(getListaContactoData());
+//	}
+//    public ObservableList<Contacto> getListaContactoData() {
+//		listaContactosData.addAll(aplicacion.obtenerContacto());
+//		return listaContactosData;
+//	}
+//    private void buscar(){
+//    	String nombre = nombreBuscarTxt.getText();
+//    	aplicacion.buscar(nombre);
+//
+//    }
+//    private void eliminar(){
+//    	String nombre = nombreBuscarTxt.getText();
+//		aplicacion.eliminar(nombre);
+//		JOptionPane.showMessageDialog(null, "Se ha eliminado correctamente el contacto");
+//    }
+//    private void crear(){
+//    	String correo = correoTxt.getText();
+//    	String nombre = nombreTxt.getText();
+//    	String numeroTelefonico = numeroTxt.getText();
+//    	aplicacion.crear(correo, nombre, numeroTelefonico);
+//    	JOptionPane.showMessageDialog(null, "Contacto creado exitosamente");
+//    }
