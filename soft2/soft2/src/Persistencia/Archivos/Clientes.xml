@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_111" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="modelo.Cliente" id="Cliente0">
+    <void property="cedula">
+     <string>123</string>
+    </void>
+    <void property="correo">
+     <string>juan@gmail.com</string>
+    </void>
+    <void property="listaCompras">
+     <void method="add">
+      <object class="modelo.Compra" id="Compra0">
+       <void property="cliente">
+        <object idref="Cliente0"/>
+       </void>
+       <void property="codigo">
+        <string>10</string>
+       </void>
+       <void property="listaProductos">
+        <void method="add">
+         <object class="modelo.Producto" id="Producto0">
+          <void property="codigo">
+           <string>1</string>
+          </void>
+          <void property="nombre">
+           <string>Peine</string>
+          </void>
+          <void property="precio">
+           <double>10000.0</double>
+          </void>
+          <void property="unidades">
+           <int>10</int>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="modelo.Producto" id="Producto1">
+          <void property="codigo">
+           <string>2</string>
+          </void>
+          <void property="nombre">
+           <string>Cepillo</string>
+          </void>
+          <void property="precio">
+           <double>15000.0</double>
+          </void>
+          <void property="unidades">
+           <int>10</int>
+          </void>
+         </object>
+        </void>
+       </void>
+       <void property="listaServicios">
+        <void method="add">
+         <object class="modelo.Servicio" id="Servicio0">
+          <void property="codigo">
+           <string>1</string>
+          </void>
+          <void property="descripcion">
+           <string>Baño, cepillada y peinada canina</string>
+          </void>
+          <void property="nombre">
+           <string>Baño canino </string>
+          </void>
+          <void property="precio">
+           <double>40000.0</double>
+          </void>
+         </object>
+        </void>
+       </void>
+       <void property="metodoPago">
+        <object class="java.lang.Enum" method="valueOf">
+         <class>modelo.MetodoPago</class>
+         <string>TARJETA_CREDITO</string>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="modelo.Compra" id="Compra1">
+       <void property="cliente">
+        <object idref="Cliente0"/>
+       </void>
+       <void property="codigo">
+        <string>20</string>
+       </void>
+       <void property="listaProductos">
+        <void method="add">
+         <object idref="Producto0"/>
+        </void>
+        <void method="add">
+         <object idref="Producto1"/>
+        </void>
+       </void>
+       <void property="listaServicios">
+        <void method="add">
+         <object idref="Servicio0"/>
+        </void>
+       </void>
+       <void property="metodoPago">
+        <object class="java.lang.Enum" id="MetodoPago0" method="valueOf">
+         <class>modelo.MetodoPago</class>
+         <string>TARJETA_DEBITO</string>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="listaMascotas">
+     <void method="add">
+      <object class="modelo.Mascota">
+       <void property="edad">
+        <int>3</int>
+       </void>
+       <void property="enfermo">
+        <string>No</string>
+       </void>
+       <void property="nombre">
+        <string>Tony</string>
+       </void>
+       <void property="tipo">
+        <object class="java.lang.Enum" method="valueOf">
+         <class>modelo.TipoMascota</class>
+         <string>PERRO</string>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="listaServicios">
+     <void method="add">
+      <object idref="Servicio0"/>
+     </void>
+     <void method="add">
+      <object idref="Servicio0"/>
+     </void>
+    </void>
+    <void property="nombre">
+     <string>Juan</string>
+    </void>
+    <void property="password">
+     <string>greehgeh</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.Cliente" id="Cliente1">
+    <void property="cedula">
+     <string>554</string>
+    </void>
+    <void property="correo">
+     <string>luis@gmail.com</string>
+    </void>
+    <void property="listaCompras">
+     <void method="add">
+      <object idref="Compra0"/>
+     </void>
+    </void>
+    <void property="listaMascotas">
+     <void method="add">
+      <object class="modelo.Mascota">
+       <void property="edad">
+        <int>2</int>
+       </void>
+       <void property="enfermo">
+        <string>No</string>
+       </void>
+       <void property="nombre">
+        <string>Lucas</string>
+       </void>
+       <void property="tipo">
+        <object class="java.lang.Enum" method="valueOf">
+         <class>modelo.TipoMascota</class>
+         <string>GATO</string>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="listaServicios">
+     <void method="add">
+      <object idref="Servicio0"/>
+     </void>
+    </void>
+    <void property="nombre">
+     <string>Luis</string>
+    </void>
+    <void property="password">
+     <string>gregfgfhgeh</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.Cliente" id="Cliente2">
+    <void property="cedula">
+     <string>565664</string>
+    </void>
+    <void property="correo">
+     <string>cam@gmail.com</string>
+    </void>
+    <void property="listaCompras">
+     <void method="add">
+      <object class="modelo.Compra" id="Compra2">
+       <void property="cliente">
+        <object idref="Cliente2"/>
+       </void>
+       <void property="codigo">
+        <string>20</string>
+       </void>
+       <void property="listaProductos">
+        <void method="add">
+         <object idref="Producto0"/>
+        </void>
+        <void method="add">
+         <object idref="Producto1"/>
+        </void>
+       </void>
+       <void property="listaServicios">
+        <void method="add">
+         <object idref="Servicio0"/>
+        </void>
+       </void>
+       <void property="metodoPago">
+        <object idref="MetodoPago0"/>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="listaMascotas">
+     <void method="add">
+      <object class="modelo.Mascota">
+       <void property="edad">
+        <int>1</int>
+       </void>
+       <void property="enfermo">
+        <string>No</string>
+       </void>
+       <void property="nombre">
+        <string>Fifi</string>
+       </void>
+       <void property="tipo">
+        <object class="java.lang.Enum" method="valueOf">
+         <class>modelo.TipoMascota</class>
+         <string>HASMTER</string>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="listaServicios">
+     <void method="add">
+      <object class="modelo.Servicio">
+       <void property="codigo">
+        <string>1</string>
+       </void>
+       <void property="descripcion">
+        <string>Baño, cepillada y peinada canina</string>
+       </void>
+       <void property="nombre">
+        <string>Baño canino </string>
+       </void>
+       <void property="precio">
+        <double>40000.0</double>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="nombre">
+     <string>Camilo</string>
+    </void>
+    <void property="password">
+     <string>jyjy</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.Cliente">
+    <void property="cedula">
+     <string>87966</string>
+    </void>
+    <void property="correo">
+     <string>jose@gmail.com</string>
+    </void>
+    <void property="nombre">
+     <string>Jose</string>
+    </void>
+    <void property="password">
+     <string>jyjy</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.Cliente">
+    <void property="cedula">
+     <string>31214123</string>
+    </void>
+    <void property="correo">
+     <string>saul@gmail.com</string>
+    </void>
+    <void property="nombre">
+     <string>saul </string>
+    </void>
+    <void property="password">
+     <string>eeqweqeqq</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
