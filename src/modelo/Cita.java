@@ -16,6 +16,10 @@ public class Cita {
 		this.cliente = cliente;
 	}
 
+	public Cita(){
+
+	}
+
 
 
 	public Agenda getAgenda() {

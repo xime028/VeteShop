@@ -1,3 +1,4 @@
-/modelo/
+/Controllers/
+/Exception/
 /exepciones/
-/ProductoException.class
+/modelo/

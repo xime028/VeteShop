@@ -1,25 +1,29 @@
 package modelo;
 
 public class Auxiliar {
-	
+
 	private String nombre;
 	private String correo;
 	private String password;
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	public Auxiliar(String nombre, String correo, String password) {
 		super();
 		this.nombre = nombre;
 		this.correo = correo;
 		this.password = password;
 	}
-	
-	
-	
+
+
+	public Auxiliar() {
+
+
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -38,10 +42,10 @@ public class Auxiliar {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 
 }

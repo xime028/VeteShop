@@ -21,25 +21,36 @@ public class Mascota {
 		this.citas = citas;
 		this.enfermo = enfermo;
 	}
-	
-	
-	
-	
+
+
+
+
+
+
+	public Mascota() {
+
+	}
+
+
+
+
+
+
 	//###############################################################################################################################
 	//##################################################### Metodos de Cita #####################################################
-			
-			
+
+
 			/*
 			public Cita crearCita(Agenda agenda, Mascota mascota, Cliente cliente){
-				
+
 				Cita cita = null;
-				cita = 
+				cita =
 			}
-			
-			
-			
+
+
+
 			public Cita obtenerCita(String codigo){
-				
+
 				Cita citaEncontrada = null;
 				Iterator<Cita> iterador = getLi
 			}

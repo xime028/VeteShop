@@ -22,7 +22,9 @@ public class Compra {
 		this.metodoPago = metodoPago;
 	}
 
+	public Compra() {
 
+	}
 
 	public String getCodigo() {
 		return codigo;

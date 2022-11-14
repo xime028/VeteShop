@@ -20,6 +20,12 @@ public class HistorialMedico {
 
 
 
+	public HistorialMedico() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public Mascota getMascota() {
 		return mascota;
 	}

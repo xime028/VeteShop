@@ -270,7 +270,7 @@ public class Veterinaria {
 				throw new ProductoException("Ya existe un producto registrado con nombre: "+nombre);
 			else
 			{
-				producto = new Producto();
+				producto = new Producto(nombre, nombre, unidades, precio);
 				producto.setCodigo(codigo);
 				producto.setNombre(nombre);
 				producto.setUnidades(unidades);
@@ -279,6 +279,7 @@ public class Veterinaria {
 				getListaProductos().add(producto);
 
 			}
+			return producto;
 
 		}
 
@@ -338,7 +339,7 @@ public class Veterinaria {
 				throw new ServicioException("Ya existe un servicio registrado con nombre: "+nombre);
 			else
 			{
-				servicio = new Servicio();
+				servicio = new Servicio(descripcion, descripcion, descripcion, precio);
 				servicio.setCodigo(codigo);
 				servicio.setNombre(nombre);
 				servicio.setDescripcion(descripcion);
@@ -347,6 +348,7 @@ public class Veterinaria {
 				getListaServicios().add(servicio);
 
 			}
+			return servicio;
 
 		}
 

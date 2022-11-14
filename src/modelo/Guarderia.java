@@ -17,6 +17,12 @@ public class Guarderia {
 
 
 
+	public Guarderia() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public ArrayList<Mascota> getListaMascotas() {
 		return listaMascotas;
 	}

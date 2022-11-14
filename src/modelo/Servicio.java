@@ -19,6 +19,10 @@ public class Servicio {
 	}
 
 
+	public Servicio(){
+
+	}
+
 
 	public String getCodigo() {
 		return codigo;
