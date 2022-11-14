@@ -1,0 +1,134 @@
+		/**
+		 * Metodo que permite serializar las lista con datos ya cargados, para ello crea un archivo xml y en este se guarda la informacion del objeto
+		 */
+
+		public void serializarListas(){
+
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Veterinarios.xml", listaVeterinarios);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Clientes.xml", listaClientes);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Buzones.xml", buzones);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Agendas.xml", listaAgendas);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Auxiliares.xml", listaAuxiliares);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Hospitalizados.xml", listaHospitalizados);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Productos.xml", listaProductos);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+			try {
+				Persistencia.serializarObjectoXML("src/Persistencia/Archivos/Servicios.xml", listaServicios);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+		}
+
+		/**
+		 * Metodo que permite deserializar las listas o mejor dicho los rchivos xml en donde se guardo la informacion de cda objeto, y al deserializar retorna las listas con los atos cargados
+		 */
+
+		public void deserializarListas() {
+//			try {
+//
+//				Persistencia.deserializarVeterinariosXML("src/Persistencia/Archivos/Veterinarios.xml", listaVeterinarios);
+//			} catch (Exception e) {
+//				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+//			}
+//
+//			try {
+//
+//				Persistencia.deserializarClienteXML("src/Persistencia/Archivos/Clientes.xml", listaClientes);
+//			} catch (Exception e) {
+//				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+//			}
+
+			try {
+
+				Persistencia.deserializarBuzonPQRSXML("src/Persistencia/Archivos/Buzones.xml", buzones);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+			try {
+
+				Persistencia.deserializarAgendasXML("src/Persistencia/Archivos/Agendas.xml", listaAgendas);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+			try {
+
+				Persistencia.deserializarAuxiliaresXML("src/Persistencia/Archivos/Auxiliares.xml", listaAuxiliares);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+			try {
+
+				Persistencia.deserializarHospitalizadosXML("src/Persistencia/Archivos/Hospitalizados.xml", listaHospitalizados);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+			try {
+
+				Persistencia.deserializarProductoXML("src/Persistencia/Archivos/Productos.xml", listaProductos);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+			try {
+
+				Persistencia.deserializarServiciosXML("src/Persistencia/Archivos/Servicios.xml", listaServicios);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+
+
+		}
